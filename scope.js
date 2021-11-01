@@ -1,17 +1,17 @@
-var x=10;
-console.log("Currently in global.");
-console.log("x globally = "+x);
+var t=35;
+console.log("Currently variable (t) is in global.");
+console.log("Value of variable (t) globally = "+t);
 var a=function () {
-    var x=5;
-    console.log("Currently inside the function a which is defined and called globally.");
-    console.log("x inside function a = "+x);
+    var t=5;
+    console.log("Currently variable (t) is inside the function (a) which is defined and called globally.");
+    console.log("Value of variable (t) inside the function (a) = "+t);
     b();
 }
 function b() {
-    var x=15;
-    console.log("Currently inside the function b which is defined globally but called inside the function a.");
-    console.log("x inside function b = "+x);
+    var t=15;
+    console.log("Currently variable (t) is inside the function (b)  which is defined globally but called inside the function (a).");
+    console.log("Value of variable (t) defined locally inside the function (b) = "+t);
 }
 a();
-console.log("Currently in global.");
-console.log("x globally = "+x);
+console.log("Currently variable (t) is in global.");
+console.log("Value of variable (t) globally = "+t);
